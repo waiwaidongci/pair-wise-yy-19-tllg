@@ -74,6 +74,34 @@ button {
   cursor: pointer;
 }
 
+button.secondary {
+  background: white;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.notice {
+  margin: 0 0 14px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: #e7f3ee;
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.notice[data-type="error"] {
+  background: #f9e9df;
+  border-color: #dcae8c;
+  color: #8a4b16;
+}
+
 .layout {
   display: grid;
   grid-template-columns: 310px minmax(360px, 1fr) 340px;
@@ -161,6 +189,20 @@ textarea {
   background: #dfe9e4;
 }
 
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: linear-gradient(135deg, #dfe9e4, #cfded6);
+}
+
+.grid-empty,
+.compare-empty {
+  margin: 18px 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .sample-body {
   padding: 12px;
 }
@@ -223,6 +265,40 @@ textarea {
   background: #dfe9e4;
 }
 
+.compare-item .photo-placeholder {
+  border-radius: 6px;
+}
+
+.compare-meta {
+  margin: 8px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.compare-item .field-label {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.compare-slot {
+  border-style: dashed;
+  color: var(--muted);
+  text-align: center;
+}
+
+.compare-hint {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background: #f7ecd6;
+  color: var(--amber);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 @media (max-width: 1120px) {
   .layout {
     grid-template-columns: 1fr;
@@ -237,6 +313,14 @@ textarea {
   .mast {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .actions {
+    justify-content: stretch;
+  }
+
+  .actions button {
+    flex: 1;
   }
 
   .filters,

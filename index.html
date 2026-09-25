@@ -13,8 +13,14 @@
         <p>Petrographic Slide Index</p>
         <h1>岩芯薄片显微照片索引台</h1>
       </div>
-      <button id="exportBtn" type="button">导出观察清单</button>
+      <div class="actions">
+        <button id="importBtn" type="button" class="secondary">导入样本库</button>
+        <button id="exportBtn" type="button">导出样本库</button>
+        <input id="importInput" type="file" accept="application/json,.json" hidden>
+      </div>
     </header>
+
+    <p id="notice" class="notice" hidden role="status"></p>
 
     <section class="layout">
       <form id="sampleForm" class="editor">
@@ -40,7 +46,7 @@
 
       <section class="board">
         <div class="filters">
-          <input id="mineralFilter" placeholder="按矿物筛选">
+          <input id="mineralFilter" placeholder="按矿物筛选，多个矿物用空格/顿号分隔（需同时包含）">
           <select id="polarFilter">
             <option value="">全部偏光</option>
             <option>单偏光</option>
