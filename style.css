@@ -50,6 +50,32 @@ textarea {
   text-transform: uppercase;
 }
 
+.mast-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mast-actions .ghost {
+  background: #e8f0eb;
+  color: var(--ink);
+}
+
+.notice {
+  margin: 0 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f2f7f3;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.notice[data-tone="error"] {
+  border-color: #e3b8b8;
+  background: #fbeaea;
+  color: #7a2f2f;
+}
+
 h1,
 h2 {
   margin: 0;
@@ -147,6 +173,12 @@ textarea {
   gap: 12px;
 }
 
+.empty-hint {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+}
+
 .sample-card {
   overflow: hidden;
   border: 1px solid var(--line);
@@ -221,6 +253,28 @@ textarea {
   object-fit: cover;
   border-radius: 6px;
   background: #dfe9e4;
+}
+
+.compare-item h3 {
+  margin: 8px 0 0;
+}
+
+.compare-item p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.compare-placeholder {
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  border-style: dashed;
+}
+
+.compare-placeholder p {
+  margin: 0;
 }
 
 @media (max-width: 1120px) {
